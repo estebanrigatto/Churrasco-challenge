@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "0e48cba3-cbbe-4d74-a677-9fbd1e996365",
+		"name": "Churrasco-Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ProductList",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJQZXRlciIsImV4cCI6MTY0Nzc1NTE2OSwiaWF0IjoxNjQ3NzE5MTY5fQ.50TT_zlQ-iHQHjxsi5MiK2h6DQrKD185qnXhzlTjRfo",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ProductById",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjaGFsbGVuZ2UiLCJleHAiOjE2NDc3NTQ4ODAsImlhdCI6MTY0NzcxODg4MH0.Q9acqXnn7Z076j4ep88OGus85vjgHNV8aAV78cEZEqw",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/products/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjaGFsbGVuZ2UiLCJleHAiOjE2NDc3NTQ4ODAsImlhdCI6MTY0NzcxODg4MH0.Q9acqXnn7Z076j4ep88OGus85vjgHNV8aAV78cEZEqw",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sku\": \"4895739048\",\r\n    \"code\": \"834897149\",\r\n    \"name\": \"banana\",\r\n    \"description\": \"de Ecuador\",\r\n    \"picture\": \"sdf/sff.jpg\",\r\n    \"price\": \"40\",\r\n    \"currency\": \"yes\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ProductUpdate",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sku\": \"4895739046\",\r\n    \"code\": \"834897145\",\r\n    \"name\": \"manzana verde\",\r\n    \"description\": \"de Neuquen\",\r\n    \"picture\": \"sdf/fdf.jpg\",\r\n    \"price\": \"35\",\r\n    \"currency\": \"yes\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/products/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"products",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"Pedro@challenge.com\",\r\n    \"firstname\": \"Pedro\",\r\n    \"lastname\": \"Ruiz\",\r\n    \"password\": \"pass1234\",\r\n    \"username\": \"Peter\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usernameOrEmail\": \"Pedro@challenge.com\",\r\n    \"password\": \"pass1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
